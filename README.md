@@ -1,1 +1,1 @@
-# Levi-s-
+# Levi Strauss & Co
