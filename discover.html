@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levi's Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: times new roman, sans-serif;
+    }
+    nav {
+      background-color: #111;
+      color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 30px;
+      background: white;
+      box-shadow: 0 5px 15px;
+      backdrop-filter: blur 15px; 
+    }
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .menu {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .menu li a {
+      color: black;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .menu li a:hover {
+      color: #e1251b; /* Levi's red */
+    }
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+    .social-icons img {
+      width: 22px;
+      height: 22px;
+  
+           }
+           body{ 
+           background:url(image/new1.jpg);
+           background-size:cover;
+           background-attachment:fixed;
+           background-position:center;
+          }
+
+	footer{
+		background-color:black;
+		color: white;
+		text-align:center;
+		padding: 15px;
+		possition:fixed;
+		margin-top:845px;
+		width: 100%;
+                box-shadow: 0 5px 15px;
+                backdrop-filter: blur 15px; 
+	}
+      
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">LEVI'S</div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="discover.html">Discover</a></button>
+    </ul>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/16upSpEPcG/?mibextid=wwXIfr"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="facebook"></a>
+      <a href="https://www.instagram.com/levis?igsh=MWNjaGF2ZW8zZTY1ag=="><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+      <a href="https://www.tiktok.com/@levis?_t=ZS-8zUknrfDstM&_r=1"><img src="https://cdn-icons-png.flaticon.com/512/733/733646.png" alt="TikTok"></a>
+    </div>
+  </nav>
+</body>
+</html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Levi's Discover Section</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+    }
+
+    /* Discover Section */
+    .discover {
+      text-align: center;
+      padding: 0px 15px;
+      background-color: black;
+    }
+
+    .discover h2 {
+      font-size: 2.5em;
+      color: white; /* Levi's red */
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 280px;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      cursor: pointer;
+    }
+
+    /* Animation (Hover Effect) */
+    .gallery img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Optional button under gallery */
+    .discover button {
+      margin-top: 30px;
+      padding: 12px 30px;
+      background: #e1251b;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .discover button:hover {
+      background: #b71c1c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Discover Section -->
+  <section class="discover">
+    <h2>Discover Levi's</h2>
+    <div class="gallery">
+      <img src="image/jacketb.jpg" alt="Levi's Collection 1">
+      <img src="image/girl5.jpg" alt="Levi's Collection 2">
+      <img src="image/boy8.jpg" alt="Levi's Collection 3">
+      <img src="image/maong jacket.jpg" alt="Levi's Collection 4">
+    </div>
+  </section>
+</body>
+</html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body {
+      background:#000;
+      color:#fff;
+      font-family:Arial, sans-serif;
+      text-align:center;
+      margin:0;
+      padding:0;
+    }
+    h2 { margin-top:30px; }
+    .discover-btn {
+      background:red;
+      color:#fff;
+      padding:12px 24px;
+      border:none;
+      cursor:pointer;
+      font-size:16px;
+      border-radius:5px;
+      transition:0.3s;
+    }
+    .discover-btn:hover { background:#b30000; }
+
+    /* Modal */
+    .modal {
+      display:none;
+      position:fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background:rgba(0,0,0,.8);
+      z-index:1000;
+    }
+    .modal-content {
+      background:#111;
+      max-width: 600px !important;
+      margin:auto;
+      padding:20px;
+      width:100%;
+      border-radius:10px;
+      position:relative;
+      animation:fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+      from {opacity:0; transform:translateY(-20px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+    .close {
+      position:absolute;
+      right:15px;
+      top:10px;
+      font-size:28px;
+      cursor:pointer;
+      color:#aaa;
+    }
+    .close:hover { color:#fff; }
+
+    /* Slideshow */
+    .slideshow {
+      position:relative;
+      max-width:100%;
+      margin:20px auto;
+    }
+    .slide {
+      display:flex;
+      justify-content: center;
+    }
+    .slide img {
+      width: 50%;
+      border-radius:10px;
+    }
+    .fade {
+      animation:fadeEffect 1s;
+    }
+    @keyframes fadeEffect {
+      from {opacity:0.4}
+      to {opacity:1}
+    }
+    /* Dots */
+    .dots {
+      text-align:center;
+      margin-top:5px;
+    }
+    .dot {
+      height:12px; width:12px;
+      margin:0 4px;
+      background:#bbb;
+      border-radius:50%;
+      display:inline-block;
+      cursor:pointer;
+    }
+    .active { background:red; }
+    }
+    .modal-content img {
+     width: 100% !important;
+     height: auto !important;
+     display: block;
+     margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h2></h2>
+  <button class="discover-btn" onclick="openModal()">Discover More</button>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>About Levi's</h3>
+      <p>Levi’s has been making iconic denim since 1873. From workwear to fashion, Levi’s continues to innovate with sustainability.</p>
+
+      <!-- Slideshow -->
+      <div class="slideshow">
+        <div class="slide fade">
+          <img src="image/girl8.jpg" alt="Levi's 1">
+        </div>
+        <div class="slide fade">
+          <img src="image/boy6.jpg" alt="Levi's 2">
+        </div>
+        <div class="slide fade">
+          <img src="image/girl7.jpg" alt="Levi's 3">
+        </div>
+      </div>
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+  </div>
+
+  <script>
+    // Modal open/close
+    function openModal(){
+      document.getElementById("myModal").style.display="block";
+    }
+    function closeModal(){
+      document.getElementById("myModal").style.display="none";
+    }
+
+    // Slideshow
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides(){
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      for(i=0;i<slides.length;i++){
+        slides[i].style.display="none";
+      }
+      slideIndex++;
+      if(slideIndex>slides.length){ slideIndex=1 }
+      for(i=0;i<dots.length;i++){
+        dots[i].className=dots[i].className.replace(" active","");
+      }
+      slides[slideIndex-1].style.display="block";
+      dots[slideIndex-1].className+=" active";
+      setTimeout(showSlides,3000); // 3 seconds auto
+    }
+
+    function currentSlide(n){
+      slideIndex=n-1;
+      showSlides();
+    }
+  </script>
+
+</body>
+
+<footer>
+	>This Website Is For Academic Purposes Only<
+</footer>
+
+</body>
+</html>

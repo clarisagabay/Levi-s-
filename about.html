@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levi's Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: times new roman, sans-serif;
+    }
+    nav {
+      background-color: #111;
+      color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 30px;
+      background: white;
+      box-shadow: 0 5px 15px;
+      backdrop-filter: blur 15px; 
+    }
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .menu {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .menu li a {
+      color: black;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .menu li a:hover {
+      color: #e1251b; /* Levi's red */
+    }
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+    .social-icons img {
+      width: 22px;
+      height: 22px;
+  
+           }
+           body{ 
+           background:url(image/image6.jpg);
+           background-size:cover;
+           background-attachment:fixed;
+           background-position:center;
+          }
+
+	footer{
+		background-color:black;
+		color: white;
+		text-align:center;
+		padding: 15px;
+		possition:fixed;
+		margin-top:845px;
+		width: 100%;
+                box-shadow: 0 5px 15px;
+                backdrop-filter: blur 15px; 
+	}
+      
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">LEVI'S</div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="discover.html">Discover</a></li>
+    </ul>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/16upSpEPcG/?mibextid=wwXIfr"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="facebook"></a>
+      <a href="https://www.instagram.com/levis?igsh=MWNjaGF2ZW8zZTY1ag=="><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+      <a href="https://www.tiktok.com/@levis?_t=ZS-8zUknrfDstM&_r=1"><img src="https://cdn-icons-png.flaticon.com/512/733/733646.png" alt="TikTok"></a>
+    </div>
+  </nav>
+</body>
+</html>
+	
+<!-- ===== About (Levi's History) – Button + Modal ===== -->
+<style>
+  :root { --maroon: #800000; }
+  /* About floating button */
+  #aboutBtn {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--maroon);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 16px;
+    font: 600 14px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,.25);
+    transition: transform .08s ease;
+    z-index: 1000;
+  }
+  #aboutBtn:active { transform: scale(0.98); }
+  #aboutBtn svg { width: 18px; height: 18px; flex: 0 0 18px; }
+
+  /* Modal */
+  #aboutOverlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+  }
+  #aboutOverlay[aria-hidden="false"] { display: flex; }
+  #aboutModal {
+    width: min(680px, 92vw);
+    background: var(--maroon);
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.35);
+    padding: 20px;
+  }
+  #aboutHeader {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    margin-bottom: 12px;
+  }
+  #aboutHeader h2 { margin: 0; font-size: 20px; }
+  #aboutClose {
+    background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.7);
+    border-radius: 8px; padding: 6px 10px; cursor: pointer; font-weight: 600;
+  }
+  #aboutContent {
+    font-size: 15px; line-height: 1.6;
+  }
+  #aboutContent p { margin: 0 0 12px; }
+  #aboutContent a { color: #fff; text-decoration: underline; }
+</style>
+
+<button id="aboutBtn" aria-haspopup="dialog" aria-controls="aboutOverlay" title="About Levi's">
+  <!-- info icon (SVG) -->
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm0 14.25a.75.75 0 0 1-.75-.75V11a.75.75 0 1 1 1.5 0v4.5a.75.75 0 0 1-.75.75zm0-8a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </svg>
+  About
+</button>
+
+<div id="aboutOverlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="aboutTitle">
+  <div id="aboutModal">
+    <div id="aboutHeader">
+      <h2 id="aboutTitle">About Levi’s (History)</h2>
+      <button id="aboutClose" type="button" aria-label="Close About">Close</button>
+    </div>
+    <div id="aboutContent">
+      <p><strong>Levi Strauss &amp; Co.</strong> was founded in <strong>1853</strong> in San Francisco by Levi Strauss.</p>
+      <p>In <strong>1873</strong>, tailor <strong>Jacob Davis</strong> partnered with Strauss to patent copper-riveted work pants—creating the first modern blue jeans. This iconic style evolved into the <strong>Levi’s® 501®</strong>, one of the most recognizable garments in history.</p>
+      <p>From durable workwear to global fashion staple, Levi’s has influenced music, film, and youth culture for generations, while pursuing innovations in fit, fabric, and more responsible finishing techniques.</p>
+      <p><em>Trademark notice:</em> Levi’s® and 501® are registered trademarks of Levi Strauss &amp; Co.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    const btn = document.getElementById('aboutBtn');
+    const overlay = document.getElementById('aboutOverlay');
+    const closeBtn = document.getElementById('aboutClose');
+
+    function openModal() {
+      overlay.setAttribute('aria-hidden', 'false');
+      // focus the close button for accessibility
+      closeBtn.focus();
+      document.addEventListener('keydown', onKeydown);
+    }
+    function closeModal() {
+      overlay.setAttribute('aria-hidden', 'true');
+      btn.focus();
+      document.removeEventListener('keydown', onKeydown);
+    }
+    function onKeydown(e) {
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'Enter' && document.activeElement === closeBtn) closeModal();
+    }
+
+    btn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeModal(); // click outside to close
+    });
+  })();
+</script>
+<!-- ===== End About (Levi's History) ===== -->
+
+
+<footer>
+	This Website Is For Project Purposes Only
+</footer>
+
+</body>
+</html>
